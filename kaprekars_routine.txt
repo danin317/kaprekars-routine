@@ -846,6 +846,7 @@ Iterations to get to 6174: 5
 Observing number: 1111
 1111 - 1111 = 0
 Iterations to get to 0: 1
+
 Observing number: 1112
 2111 - 1112 = 999
 9990 - 999 = 8991
@@ -9287,6 +9288,7 @@ Iterations to get to 6174: 5
 Observing number: 2222
 2222 - 2222 = 0
 Iterations to get to 0: 1
+
 Observing number: 2223
 3222 - 2223 = 999
 9990 - 999 = 8991
@@ -17779,6 +17781,7 @@ Iterations to get to 6174: 5
 Observing number: 3333
 3333 - 3333 = 0
 Iterations to get to 0: 1
+
 Observing number: 3334
 4333 - 3334 = 999
 9990 - 999 = 8991
@@ -26360,6 +26363,7 @@ Iterations to get to 6174: 5
 Observing number: 4444
 4444 - 4444 = 0
 Iterations to get to 0: 1
+
 Observing number: 4445
 5444 - 4445 = 999
 9990 - 999 = 8991
@@ -35133,6 +35137,7 @@ Iterations to get to 6174: 5
 Observing number: 5555
 5555 - 5555 = 0
 Iterations to get to 0: 1
+
 Observing number: 5556
 6555 - 5556 = 999
 9990 - 999 = 8991
@@ -43714,6 +43719,7 @@ Iterations to get to 6174: 5
 Observing number: 6666
 6666 - 6666 = 0
 Iterations to get to 0: 1
+
 Observing number: 6667
 7666 - 6667 = 999
 9990 - 999 = 8991
@@ -52206,6 +52212,7 @@ Iterations to get to 6174: 5
 Observing number: 7777
 7777 - 7777 = 0
 Iterations to get to 0: 1
+
 Observing number: 7778
 8777 - 7778 = 999
 9990 - 999 = 8991
@@ -60647,6 +60654,7 @@ Iterations to get to 6174: 5
 Observing number: 8888
 8888 - 8888 = 0
 Iterations to get to 0: 1
+
 Observing number: 8889
 9888 - 8889 = 999
 9990 - 999 = 8991
@@ -69064,3 +69072,4 @@ Iterations to get to 6174: 5
 Observing number: 9999
 9999 - 9999 = 0
 Iterations to get to 0: 1
+

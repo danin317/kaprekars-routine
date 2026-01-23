@@ -64,7 +64,7 @@ with open(file_name, "w") as f:
             smaller_number = get_smaller_number(result_digits)
             iterations += 1
         if is_result_zero:
-            f.write(f"Iterations to get to 0: {iterations}\n")
+            f.write(f"Iterations to get to 0: {iterations}\n\n")
         else:
             f.write(f"Iterations to get to {KAPREKARS_CONSTANT}: {iterations}\n\n")
         number += 1
