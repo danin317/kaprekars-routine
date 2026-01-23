@@ -1,6 +1,5 @@
 KAPREKARS_CONSTANT = 6174
-iterations = 0
-number = 1111
+file_name = "kaprekars_routine.txt"
 
 def get_bigger_number(numbers):
     number_digits_copy = numbers.copy()
@@ -31,36 +30,41 @@ def get_smaller_number(numbers):
         smaller_number += str(number)
     return int(smaller_number)
 
-number_digits = []
-copy = number 
-while copy != 0:
-    digit = copy % 10
-    number_digits.append(digit)
-    copy //= 10
-
-result = 0
-is_result_zero = False
-bigger_number = get_bigger_number(number_digits)
-smaller_number = get_smaller_number(number_digits)
-while True:
-    result = bigger_number - smaller_number
-    print(f"{bigger_number} - {smaller_number} = {result}")
-    if result == KAPREKARS_CONSTANT:
-        iterations += 1
-        break
-    if result == 0:
-        iterations += 1
-        is_result_zero = True
-        break
-    result_digits = []
-    while result != 0:
-        digit = result % 10
-        result_digits.append(digit)
-        result //= 10
-    bigger_number = get_bigger_number(result_digits)
-    smaller_number = get_smaller_number(result_digits)
-    iterations += 1
-if is_result_zero:
-    print(f"Iterations to get to 0: {iterations}")
-else:
-    print(f"Iterations to get to {KAPREKARS_CONSTANT}: {iterations}")
+with open(file_name, "w") as f:
+    number = 1000
+    while number <= 9999:
+        iterations = 0
+        number_digits = []
+        copy = number 
+        while copy != 0:
+            digit = copy % 10
+            number_digits.append(digit)
+            copy //= 10
+        f.write(f"Observing number: {number}\n")
+        result = 0
+        is_result_zero = False
+        bigger_number = get_bigger_number(number_digits)
+        smaller_number = get_smaller_number(number_digits)
+        while True:
+            result = bigger_number - smaller_number
+            f.write(f"{bigger_number} - {smaller_number} = {result}\n")
+            if result == KAPREKARS_CONSTANT:
+                iterations += 1
+                break
+            if result == 0:
+                iterations += 1
+                is_result_zero = True
+                break
+            result_digits = []
+            while result != 0:
+                digit = result % 10
+                result_digits.append(digit)
+                result //= 10
+            bigger_number = get_bigger_number(result_digits)
+            smaller_number = get_smaller_number(result_digits)
+            iterations += 1
+        if is_result_zero:
+            f.write(f"Iterations to get to 0: {iterations}\n")
+        else:
+            f.write(f"Iterations to get to {KAPREKARS_CONSTANT}: {iterations}\n\n")
+        number += 1
