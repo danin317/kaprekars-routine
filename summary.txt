@@ -1,0 +1,12 @@
+SUMMARY ON KAPREKAR'S ROUTINE:
+Amount of numbers that did not reach Kaprekar's Constant (result is zero): 9
+Amount of numbers that took 1 iteration to reach Kaprekar's Constant: 357
+Amount of numbers that took 2 iterations to reach Kaprekar's Constant: 519
+Amount of numbers that took 3 iterations to reach Kaprekar's Constant: 2124
+Amount of numbers that took 4 iterations to reach Kaprekar's Constant: 1124
+Amount of numbers that took 5 iterations to reach Kaprekar's Constant: 1379
+Amount of numbers that took 6 iterations to reach Kaprekar's Constant: 1508
+Amount of numbers that took 7 iterations to reach Kaprekar's Constant: 1980
+Amount of numbers that took 8 or more iterations to reach Kaprekar's Constant: 0
+
+Results during the Kaprekar's Routine that are not 4 digit numbers: 77

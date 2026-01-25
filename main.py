@@ -1,5 +1,6 @@
 KAPREKARS_CONSTANT = 6174
 file_name = "kaprekars_routine.txt"
+summary = "summary.txt"
 
 def get_bigger_number(numbers):
     number_digits_copy = numbers.copy()
@@ -30,6 +31,16 @@ def get_smaller_number(numbers):
         smaller_number += str(number)
     return int(smaller_number)
 
+iterations_result_is_0 = 0
+iterations_1 = 0
+iterations_2 = 0
+iterations_3 = 0
+iterations_4 = 0
+iterations_5 = 0
+iterations_6 = 0
+iterations_7 = 0
+numbers_less_than_4_digits = 0
+iterations_more = 0
 with open(file_name, "w") as f:
     number = 1000
     while number <= 9999:
@@ -48,6 +59,8 @@ with open(file_name, "w") as f:
         while True:
             result = bigger_number - smaller_number
             f.write(f"{bigger_number} - {smaller_number} = {result}\n")
+            if result < 1000:
+                numbers_less_than_4_digits += 1
             if result == KAPREKARS_CONSTANT:
                 iterations += 1
                 break
@@ -65,6 +78,35 @@ with open(file_name, "w") as f:
             iterations += 1
         if is_result_zero:
             f.write(f"Iterations to get to 0: {iterations}\n\n")
+            iterations_result_is_0 += 1
         else:
             f.write(f"Iterations to get to {KAPREKARS_CONSTANT}: {iterations}\n\n")
+            if iterations == 1:
+                iterations_1 += 1
+            elif iterations == 2:
+                iterations_2 += 1
+            elif iterations == 3:
+                iterations_3 += 1
+            elif iterations == 4:
+                iterations_4 += 1
+            elif iterations == 5:
+                iterations_5 += 1
+            elif iterations == 6:
+                iterations_6 += 1
+            elif iterations == 7:
+                iterations_7 += 1
+            else:
+                iterations_more += 1
         number += 1
+with open(summary, "w") as f:
+    f.write("SUMMARY ON KAPREKAR'S ROUTINE:\n")
+    f.write(f"Amount of numbers that did not reach Kaprekar's Constant (result is zero): {iterations_result_is_0}\n")
+    f.write(f"Amount of numbers that took 1 iteration to reach Kaprekar's Constant: {iterations_1}\n")
+    f.write(f"Amount of numbers that took 2 iterations to reach Kaprekar's Constant: {iterations_2}\n")
+    f.write(f"Amount of numbers that took 3 iterations to reach Kaprekar's Constant: {iterations_3}\n")
+    f.write(f"Amount of numbers that took 4 iterations to reach Kaprekar's Constant: {iterations_4}\n")
+    f.write(f"Amount of numbers that took 5 iterations to reach Kaprekar's Constant: {iterations_5}\n")
+    f.write(f"Amount of numbers that took 6 iterations to reach Kaprekar's Constant: {iterations_6}\n")
+    f.write(f"Amount of numbers that took 7 iterations to reach Kaprekar's Constant: {iterations_7}\n")
+    f.write(f"Amount of numbers that took 8 or more iterations to reach Kaprekar's Constant: {iterations_more}\n\n")
+    f.write(f"Results during the Kaprekar's Routine that are not 4 digit numbers: {numbers_less_than_4_digits}")
