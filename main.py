@@ -118,6 +118,19 @@ with open(file_name, "w") as f:
             else:
                 iterations_more += 1
         number += 1
+iterations_6_copy = iterations_6
+iterations_1_copy = iterations_1
+iterations_7_copy = iterations_7
+iterations_4_copy = iterations_4
+counter = 0
+while True:
+    counter += 1
+    iterations_6_copy -= 1
+    iterations_1_copy -= 1
+    iterations_7_copy -= 1
+    iterations_4_copy -= 1
+    if iterations_6_copy == 0 or iterations_1_copy == 0 or iterations_7_copy == 0 or iterations_4_copy == 0:
+        break
 with open(summary, "w") as f:
     f.write("SUMMARY ON KAPREKAR'S ROUTINE:\n")
     f.write(f"Amount of numbers that did not reach Kaprekar's Constant (result is zero): {iterations_result_is_0}\n")
@@ -129,4 +142,5 @@ with open(summary, "w") as f:
     f.write(f"Amount of numbers that took 6 iterations to reach Kaprekar's Constant: {iterations_6}\n")
     f.write(f"Amount of numbers that took 7 iterations to reach Kaprekar's Constant: {iterations_7}\n")
     f.write(f"Amount of numbers that took 8 or more iterations to reach Kaprekar's Constant: {iterations_more}\n\n")
-    f.write(f"Results during the Kaprekar's Routine that are not 4 digit numbers: {numbers_less_than_4_digits}")
+    f.write(f"Results during the Kaprekar's Routine that are not 4 digit numbers: {numbers_less_than_4_digits}\n")
+    f.write(f"Out of the given number of iterations, we can write theKaprekar's Constant {counter} times.\n")

@@ -10,3 +10,4 @@ Amount of numbers that took 7 iterations to reach Kaprekar's Constant: 1980
 Amount of numbers that took 8 or more iterations to reach Kaprekar's Constant: 0
 
 Results during the Kaprekar's Routine that are not 4 digit numbers: 77
+Out of the given number of iterations, we can write theKaprekar's Constant 357 times.
