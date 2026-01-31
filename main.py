@@ -8,6 +8,7 @@ file_it_4 = "iterations_4.txt"
 file_it_5 = "iterations_5.txt"
 file_it_6 = "iterations_6.txt"
 file_it_7 = "iterations_7.txt"
+less_than_4_digits = "all_numbers_with_less_than_4_digits.txt"
 def get_bigger_number(numbers):
     number_digits_copy = numbers.copy()
     descending_order = []
@@ -50,6 +51,8 @@ iterations_more = 0
 with open(file_name, "w") as f:
     number = 1000
     while number <= 9999:
+        with open(less_than_4_digits, "a") as l:
+            l.write(f"Observing number:{number}:\n")
         iterations = 0
         number_digits = []
         copy = number 
@@ -67,6 +70,8 @@ with open(file_name, "w") as f:
             f.write(f"{bigger_number} - {smaller_number} = {result}\n")
             if result < 1000:
                 numbers_less_than_4_digits += 1
+                with open(less_than_4_digits, "a") as l:
+                    l.write(f"{bigger_number} - {smaller_number} = {result}\n")
             if result == KAPREKARS_CONSTANT:
                 iterations += 1
                 break
