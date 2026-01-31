@@ -1,7 +1,13 @@
 KAPREKARS_CONSTANT = 6174
 file_name = "kaprekars_routine.txt"
 summary = "summary.txt"
-
+file_it_1 = "iterations_1.txt"
+file_it_2 = "iterations_2.txt"
+file_it_3 = "iterations_3.txt"
+file_it_4 = "iterations_4.txt"
+file_it_5 = "iterations_5.txt"
+file_it_6 = "iterations_6.txt"
+file_it_7 = "iterations_7.txt"
 def get_bigger_number(numbers):
     number_digits_copy = numbers.copy()
     descending_order = []
@@ -82,18 +88,32 @@ with open(file_name, "w") as f:
         else:
             f.write(f"Iterations to get to {KAPREKARS_CONSTANT}: {iterations}\n\n")
             if iterations == 1:
+                with open(file_it_1, "a") as g:
+                    g.write(f"{number}\n\n")
                 iterations_1 += 1
             elif iterations == 2:
+                with open(file_it_2, "a") as g:
+                    g.write(f"{number}\n\n")
                 iterations_2 += 1
             elif iterations == 3:
+                with open(file_it_3, "a") as g:
+                    g.write(f"{number}\n\n")
                 iterations_3 += 1
             elif iterations == 4:
+                with open(file_it_4, "a") as g:
+                    g.write(f"{number}\n\n")
                 iterations_4 += 1
             elif iterations == 5:
+                with open(file_it_5, "a") as g:
+                    g.write(f"{number}\n\n")
                 iterations_5 += 1
             elif iterations == 6:
+                with open(file_it_6, "a") as g:
+                    g.write(f"{number}\n\n")
                 iterations_6 += 1
             elif iterations == 7:
+                with open(file_it_7, "a") as g:
+                    g.write(f"{number}\n\n")
                 iterations_7 += 1
             else:
                 iterations_more += 1
